@@ -13,19 +13,7 @@ pipeline {
         echo "$BUILD"
       }
     }
-    stage('Build'){
-      environment {
-        MYJOB = 'DevOps2'
-        BUILD = 'PIPELINE2'
-    }
-      steps {
-        sh 'mvn test'
-        junit "**/target/surefire-reports/*.xml"
-        echo "compilation done"
-        echo "$MYJOB"
-        echo "$WORKSPACE"
+ }
+  }     
+  
 
-      }
-       }
-  }
-}
